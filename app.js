@@ -6,7 +6,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get("/", cors(), (req, res) => {});
+app.get("/", cors(), (req, res) => {
+  res.send("Api is working fine")
+});
 
 app.post("/", async (req, res) => {
   const { email, password } = req.body;
